@@ -6,6 +6,17 @@ public class Student {
 	private int group;
 	private String faculty;
 	private Address address;
+	
+	Student(){
+		name = "Nemo";
+		
+		//прямой доступ в полям внутреннего класса только через создание экземпляра
+		//но может обращаться даже к приватным полям
+		Address address = new Address();
+		address.street = "Проспект Мира"; 
+	}
+	
+	
 
 // private, protected – may be
 	public class Address { // inner class: begin
@@ -16,6 +27,12 @@ public class Student {
 		private String email;
 		private String skype;
 		private long phoneNumber;
+		
+		
+		//хочу доступ к внешнему полю
+		public String getName(){
+			return name;
+		}
 // more code
 	}// inner class: end
 	
@@ -28,6 +45,10 @@ public class Student {
 		//у меня есть доступ к private полям
 		address.city = "Moscow";
 		address2.city = "Moscow";
+		//а как внутреннему классу обратиться к полям внешнего?
+		//так не работает
+		//address.name = "Name";
+		
 		System.out.println(address.city);
 		
 	}

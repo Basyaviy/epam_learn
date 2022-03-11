@@ -14,5 +14,8 @@ public class StudentMain {
 		//address2.city = "Moscow";
 		//System.out.println(address.city);
 		
+		//метод внутреннего метода выводит данные внешнего поля
+		System.out.println(address.getName());
+		
 	}
 }
