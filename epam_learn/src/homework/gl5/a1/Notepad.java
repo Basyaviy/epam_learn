@@ -24,7 +24,7 @@ public class Notepad {
 		for(Record currentRecord : records) {
 			if(currentRecord.date.equals(record.date)){
 				System.out.println("Эта дата уже есть в записях, добавляем запись к ним");
-				currentRecord.records.addAll(record.);
+				//currentRecord.records.addAll(record.);
 				break;
 			}
 			//запись с такой датой не найдена, создаём новую
